@@ -1,0 +1,12 @@
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py,cover
+
+# Ignore other executable or binary files
+*.exe
+*.bin
+*.so
+*.dll
