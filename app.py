@@ -37,11 +37,11 @@ def math_fun_fact():
         "is_prime": prime,
         "is_perfect": perfect,
         "properties": properties,
-        "digit-sum": digit_sum,
+        "digit_sum": digit_sum,
         "fun_fact": fun_fact
     }), 200
 
 app.register_blueprint(api)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
