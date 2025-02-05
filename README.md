@@ -113,7 +113,7 @@ print(response.json())
 ### Using a Browser
 Open the following URL in your browser:
 ```
-https://hng-stage1-task-backend-qr5je98t7.vercel.app//api/classify-number?number=371
+https://hng-stage1-task-backend-qr5je98t7.vercel.app/api/classify-number?number=371
 ```
 
 ---

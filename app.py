@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, Blueprint, request
 import datetime
 from flask_cors import CORS
-from utils.helpers import is_prime, is_armstrong, is_even_or_odd, is_perfect, sum_digits
+from utils.helpers import is_prime, is_armstrong, is_even_or_odd, is_perfect, sum_digits, get_number_fact
 
 
 app = Flask(__name__)
@@ -30,12 +30,7 @@ def math_fun_fact():
         properties.append("armstrong")
     properties.append(even_or_odd)
 
-
-    fun_fact = "This number does not have a fun fact"
-    if armstrong:
-        digits = [int(d) for d in str(number)]
-        cubes = [f"{digit}^{len(digits)}" for digit in digits]
-        fun_fact = f"{number} is an Armstrong number because {' + '. join(cubes)} = {number}"
+    fun_fact = get_number_fact(number)
 
     return jsonify({
         "number": number,
