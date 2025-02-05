@@ -15,8 +15,9 @@ def math_fun_fact():
     try:
         number = int(request.args.get('number'))
     except (TypeError, ValueError):
+        alphabet = request.args.get('number')
         return jsonify({
-            'number': "alphabet",
+            'number': alphabet,
             'error': True
         }), 400
     prime = is_prime(number)
